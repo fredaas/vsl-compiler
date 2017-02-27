@@ -1,0 +1,61 @@
+// This program doesn't do anything interesting, it's just to exercise most of
+// the lexical entities.
+
+// FUNC, identifier (func. def.)
+FUNC main()
+BEGIN
+    // VAR, identifier, comma operator
+    VAR a, _a1, a_2
+    // PRINT keyword, string literal
+    PRINT "Hello, world!"
+    // Whitespace: line starts on a tab character
+	PRINT ""
+    // String literal with escaped double quotes
+    PRINT "Hello, \"world\"!"
+
+    // Assignment operator and number constant
+    _a1 := 10
+    a_2 := 2
+
+    // Plus operator
+    a := _a1 + a_2
+    PRINT _a1, "+", a_2, ":=", a
+
+    // Minus operator
+    a := _a1 - a_2
+    PRINT _a1, "-", a_2, ":=", a
+
+    // Parentheses, unary minus operator
+    a := _a1 + (-a_2)
+    PRINT _a1, "+ (-", a_2, ") :=", a
+
+    // Multiply operator
+    a := _a1 * a_2
+    PRINT _a1, "*", a_2, ":=", a
+
+    // Divide operator
+    a := _a1 / a_2
+    PRINT _a1, "/", a_2, ":=", a
+
+    // IF, THEN, FI, single statement
+    IF a > 0 THEN
+        PRINT a
+
+    // WHILE/DO, block statements
+    WHILE a > 0 DO
+    BEGIN
+        IF a - 3 > 0 THEN
+            a := a - 1
+        ELSE
+        BEGIN
+            a := a - 1
+            PRINT "Skip..."
+            CONTINUE
+        END
+        PRINT a
+    END
+
+    // RETURN keyword and number constant
+    RETURN 0
+END
+
