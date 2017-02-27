@@ -21,7 +21,6 @@ void node_print(node_t *root, int nesting)
     }
 }
 
-/* Take the memory allocated to a node and fill it with the given elements. */
 node_t * node_init(node_t *nd, node_index_t type, void *data,
     uint64_t n_children, ...)
 {
