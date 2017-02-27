@@ -49,7 +49,6 @@ void node_finalize(node_t *discard)
     }
 }
 
-
 void destroy_subtree(node_t *discard)
 {
     if (discard != NULL) {
